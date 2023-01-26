@@ -16,7 +16,7 @@
     <div class="col-lg-12">
             
         
-        <div class="row">
+        <div class="row" *ngFor="let oeuvre of oeuvres;">
             <div class="col-xl-4 col-sm-6">
                 <div class="card">
                     <div class="card-body">
@@ -25,7 +25,7 @@
                             <img src="assets/images/art.jpg" alt="" class="img-fluid mx-auto d-block">
                         </div>
                         <div class="mt-4 text-center">
-                            <h5 class="mb-3 text-truncate"><a routerLink="/oeuvredetail" class="text-dark">art </a></h5>
+                            <h5 class="mb-3 text-truncate"><a routerLink="/oeuvredetail/{{oeuvre.id}}" class="text-dark">{{oeuvre.titre}} </a></h5>
                             
                            
                            
@@ -40,12 +40,7 @@
                         <div class="product-img position-relative">
                             <img src="assets/images/art1.jpg" alt="" class="img-fluid mx-auto d-block">
                         </div>
-                        <div class="mt-4 text-center">
-                            <h5 class="mb-3 text-truncate"><a routerLink="/oeuvredetail" class="text-dark">art</a></h5>
-                            
-                           
-                           
-                        </div>
+                        
                     </div>
                 </div>
             </div>
